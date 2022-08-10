@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useContext} from "react";
 import {FiShoppingCart} from "react-icons/fi";
+import { CartContext } from "../context/CartContext";
 
 const NavBar = () => {
     return(

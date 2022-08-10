@@ -1,12 +1,12 @@
 import React from "react";
 import { FiPlus } from "react-icons/fi";
 
-const Item = () => {
+const Item = ({name, price}) => {
     return (
         <div className="item">
-            <span>Image</span>
+            <span>{name}</span>
             <div className="item-footer">
-                <span className="item-price">£15</span>
+                <span className="item-price">{price}</span>
                 <FiPlus/>
             </div>
         </div>
