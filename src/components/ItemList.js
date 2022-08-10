@@ -2,9 +2,10 @@ import React from "react";
 import Item from "./Item";
 import {nanoid} from "nanoid";
 
-/**
- * Static array
- * It will not be changed as the purpose of the app is to display a cart system using the context API
+/*  
+ *  STATIC ARRAY
+ *  It will not be changed as the purpose of the app is to display a cart system using the context API for educational purposes.
+ *  Future plans to implement stock through context api.
  */
 
 const stock = [
