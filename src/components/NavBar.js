@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import {FiShoppingCart} from "react-icons/fi";
 import { CartContext } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
     // Call the cart state and store the length of it in a variable
@@ -10,10 +11,10 @@ const NavBar = () => {
     return(
         <div className="nav-bar">
             <h1>Shopping Cart</h1>
-            <div className="nav-bar-cart">
+            <Link to="./Pages/Checkout"><div className="nav-bar-cart">
                 <FiShoppingCart className="nav-cartbtn"/>
                 <span>{total}</span>
-            </div>
+            </div></Link>
         </div>
     );
 }

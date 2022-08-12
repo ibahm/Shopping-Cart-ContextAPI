@@ -27,7 +27,11 @@ code {
 
 .nav-bar-cart{
   display: flex;
+  justify-content: center;
   align-items: center;
+  border-radius: 20px;
+  padding: 10px;
+  transition: all 0.2s ease 0s;
 }
 
 .nav-cartbtn{
@@ -50,27 +54,41 @@ code {
   height: 200px;
   width: 300px;
   padding: 1rem;
+  transition: all 0.2s ease 0s;
+}
+
+.item:hover, .nav-bar-cart:hover {
+  transform: scale(1.1);
+  background-color: rgba(0,0,0,0.2);
+}
+
+.nav-bar-cart:hover {
+  cursor: pointer;
 }
 
 .item-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.473);
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 10px;
   padding: 0.5rem 1rem;
+  box-shadow: 1px 1px rgba(0,0,0,0.3);
+  transition: all 0.2s ease 0s;
 }
 
-.cart-add{
+.cart-add { 
   border-radius: 20px;
   padding: 2px;
+  transition: all 0.2s ease 0s;
 }
 
 .cart-add:hover {
+  transform: scale(1.15);
   background-color: rgba(0,0,0, 0.1);
   cursor: pointer;
 }
 
 .cart-add:active {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }

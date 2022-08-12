@@ -14,7 +14,7 @@ const Item = ({name, price}) => {
         <div className="item">
             <span >{name}</span>
             <div className="item-footer">
-                <span className="item-price">{price}</span>
+                <span className="item-price">£{price}</span>
                 <FiPlus className="cart-add"onClick={CartAdd}/>
             </div>
         </div>
