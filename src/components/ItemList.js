@@ -25,7 +25,7 @@ const ItemList = () => {
     return (
         <div className="item-list">
             {stock.map(item => (
-                <Item key={item.id} name={item.name} price={item.price}/>
+                <Item id={item.id} name={item.name} price={item.price}/>
             ))}
         </div>
     );

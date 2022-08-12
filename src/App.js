@@ -6,10 +6,8 @@ import { CartProvider } from "./context/CartContext";
 const App = () => {
   return (
     <div className="container">
-      
-        <NavBar/>
-        <ItemList/>
-      
+      <NavBar/>
+      <ItemList/>
     </div>
   );
 }

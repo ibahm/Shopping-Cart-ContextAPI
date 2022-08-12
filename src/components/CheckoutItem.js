@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
+import {MdClose} from "react-icons/md";
+import { CartContext } from "../context/CartContext";
 
-const CheckoutItem = () => {
+const CheckoutItem = ({id, name, price}) => {
+    const {DeleteFromCart} = useContext(CartContext);
+
+    const handleDete = () => {
+        DeleteFromCart(id);
+    }
+
     return (
         <div className="checkout-item">
-            <h1>yes</h1>
+            <div className="image-holder"></div>
+            <div className="checkout-footer">
+                <span>{name}</span>
+                <span>£{price}</span>
+                <MdClose className="deletebtn" onClick={handleDete}/>
+            </div>
         </div>
     )
 }
