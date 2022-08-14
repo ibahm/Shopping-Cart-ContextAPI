@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext} from "react";
 import CheckoutItem from "./CheckoutItem";
 import { CartContext } from "../context/CartContext";
 
@@ -18,7 +18,7 @@ const CheckoutList = () => {
                 <h2>Total</h2>
                 <h4>Sub-Total: £{(subTotal.toFixed(2))}</h4>
                 <h4>Delivery: {subTotal >= 35 ? "FREE" : "£4.99"}</h4>
-                <h3>Total: {subTotal >= 35 ? subTotal.toFixed(2) : (subTotal + 4.99).toFixed(2)}</h3>
+                <h3>Total: £{subTotal >= 35 ? subTotal.toFixed(2) : (subTotal + 4.99).toFixed(2)}</h3>
                 <button className="checkout-button">CHECKOUT</button>
             </div>
         </div>

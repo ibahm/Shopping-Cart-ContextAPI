@@ -4,7 +4,6 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  background-color: rgb(184, 184, 184, 0.2);
 }
 
 code {
@@ -14,6 +13,7 @@ code {
 
 .container {
   width: 100vw;
+  height: 100vh;
   margin: auto;
 }
 
@@ -22,9 +22,17 @@ code {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background-color: rgba(255,255,255, 1);
-  color: black;
+  position: sticky;
+  top: 0;
+  z-index: 1;
   padding: 0 5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.nav-bar h3 {
+  background: -webkit-linear-gradient(#0092ff, #216bcf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav-bar-cart{
@@ -42,9 +50,15 @@ code {
 
 .item-list {
   display: grid;
-  margin: 5rem;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   grid-gap: 1rem;
+  margin: 5em;
+  min-width: fit-content;
+  padding: 2em;
+  background: rgb(158,213,255);
+  background: linear-gradient(90deg, rgba(158,213,255,1) 0%, rgba(0,146,255,1) 35%, rgba(33,107,207,1) 100%);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 5px;
 }
 
 .item {
@@ -52,16 +66,16 @@ code {
   justify-content: space-between;
   flex-direction: column;
   border-radius: 2px;
-  background-color: rgba(0,0,0,0.1);
   height: 200px;
-  width: 300px;
+  min-width: 100px;
   padding: 1rem;
   transition: all 0.2s ease 0s;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .item:hover, .nav-bar-cart:hover {
-  transform: scale(1.1);
-  background-color: rgba(0,0,0,0.2);
+  transform: scale(1.05);
 }
 
 .nav-bar-cart:hover {
@@ -72,8 +86,6 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 1);
-  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 2px;
   padding: 0.5rem 1rem;
   transition: all 0.2s ease 0s;
@@ -99,14 +111,18 @@ code {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 20px;
+  margin: 5em;
+  padding: 1rem;
+  border-radius: 5px;
+  background: rgb(158,213,255);
+  background: linear-gradient(90deg, rgba(158,213,255,1) 0%, rgba(0,146,255,1) 35%, rgba(33,107,207,1) 100%);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .checkout-list {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 0.2rem;
-  background-color: white;
+  grid-gap: 1rem;
 }
 
 .checkout-info {
@@ -118,6 +134,8 @@ code {
   background-color: white;
   width: 300px;
   height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 5px;
 }
 
 .checkout-button {
@@ -132,7 +150,6 @@ code {
 }
 
 .checkout-button:hover {
-  background-color: rgb(0, 194, 0);
   cursor: pointer;
 }
 
@@ -142,12 +159,15 @@ code {
 
 .checkout-item{
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 2px;
   height: 200px;
-  width: 400px;
+  width: 300px;
   padding: 1rem;
-  border-top: 1px solid lightgrey;
+  transition: all 0.2s ease 0s;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .image-holder{
@@ -158,15 +178,11 @@ code {
 
 .checkout-footer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
-  border: 1px solid rgba(151, 151, 151, 0.623);
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  margin: 0 5px;
-  flex-grow: 10;
-  white-space: nowrap;
+  border-radius: 2px;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease 0s;
 }
 
 .deletebtn {

@@ -7,10 +7,10 @@ const Checkout = () => {
     return (
         <>
            <div className="nav-bar">
-                <h1>My Cart</h1>
-                    <Link to="/">
-                        <FiHome/>
-                    </Link>
+                <h3>My Cart</h3>
+                <Link to="/">
+                    <FiHome/>
+                </Link>
             </div>
             <div className="checkout-container">
                 <CheckoutList/>

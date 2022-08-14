@@ -11,7 +11,6 @@ const CheckoutItem = ({id, name, price}) => {
 
     return (
         <div className="checkout-item">
-            <div className="image-holder"></div>
             <div className="checkout-footer">
                 <span>{name}</span>
                 <span>£{price}</span>

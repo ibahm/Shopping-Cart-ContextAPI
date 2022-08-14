@@ -4,16 +4,16 @@ import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
-    // Call the cart state and store the length of it in a variable
     const {cart} = useContext(CartContext);
     const total = cart.length;
 
     return(
+        
         <div className="nav-bar">
-            <h1>Shopping Cart</h1>
+            <h3>Shopping Cart</h3>
             <Link to="./Pages/Checkout"><div className="nav-bar-cart">
                 <FiShoppingCart className="nav-cartbtn"/>
-                <span>{total}</span>
+                <span className="cart-quantity">{total}</span>
             </div></Link>
         </div>
     );
