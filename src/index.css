@@ -4,7 +4,7 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  background-color: rgb(184, 184, 184, 0.3);
+  background-color: rgb(184, 184, 184, 0.2);
 }
 
 code {
@@ -21,7 +21,8 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(255,255,255, 0.8);
+  flex-wrap: wrap;
+  background-color: rgba(255,255,255, 1);
   color: black;
   padding: 0 5rem;
 }
@@ -94,26 +95,65 @@ code {
   transform: scale(1.2);
 }
 
+.checkout-cont {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
 .checkout-list {
   display: grid;
-  margin: 5rem;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-gap: 0.2rem;
+  background-color: white;
+}
+
+.checkout-info {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 0 5px;
+  padding: 1rem;
+  background-color: white;
+  width: 300px;
+  height: 100%;
+}
+
+.checkout-button {
+  border: none;
+  padding: 1rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: rgb(66, 204, 66, 0.8);
+  transition: all 0.2s ease 0s;
+}
+
+.checkout-button:hover {
+  background-color: rgb(0, 194, 0);
+  cursor: pointer;
+}
+
+.checkout-info h2 {
+  border-bottom: 1px solid lightgrey;
 }
 
 .checkout-item{
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
-  background-color: rgba(255,255,255, 0.2);
   height: 200px;
   width: 400px;
   padding: 1rem;
+  border-top: 1px solid lightgrey;
 }
 
 .image-holder{
   width: 400px;
   background-color: white;
+  border: 1px solid rgba(151, 151, 151, 0.623);
 }
 
 .checkout-footer {
@@ -121,7 +161,7 @@ code {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid rgba(151, 151, 151, 0.623);
   background-color: rgba(255, 255, 255, 0.8);
   padding: 10px;
   margin: 0 5px;
