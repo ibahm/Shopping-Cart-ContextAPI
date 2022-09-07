@@ -11,7 +11,7 @@ const NavBar = () => {
         
         <div className="nav-bar">
             <h3>Shopping Cart</h3>
-            <Link to="./Pages/Checkout"><div className="nav-bar-cart">
+            <Link to="./Pages/Checkout" className="nav-link"><div className="nav-bar-cart">
                 <FiShoppingCart className="nav-cartbtn"/>
                 <span className="cart-quantity">{total}</span>
             </div></Link>
