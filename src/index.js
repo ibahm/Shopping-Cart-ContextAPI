@@ -11,7 +11,7 @@ root.render(
     <BrowserRouter>
         <Routes>
             <Route path="/" element={<CartProvider><App/></CartProvider>}/>
-            <Route path="/Pages/Checkout" element={<CartProvider><Checkout/></CartProvider>}/>
+            <Route path="/checkout" element={<CartProvider><Checkout/></CartProvider>}/>
         </Routes>
     </BrowserRouter>
 );
