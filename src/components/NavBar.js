@@ -30,11 +30,11 @@ const NavBar = () => {
                 </div>
             </div>
             <div className="dropdown">
-                <button class="clothbtn">Trousers</button>
+                <button class="clothbtn">Bottoms</button>
                 <div class="dropdown-content">
                     <a href="#">Denim</a>
                     <a href="#">Joggers</a>
-                    <a href="#">Leggings</a>
+                    <a href="#">Shorts</a>
                 </div>
             </div>
             <div className="dropdown">
