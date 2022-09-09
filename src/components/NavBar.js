@@ -11,7 +11,7 @@ const NavBar = () => {
         
         <div className="nav-bar">
             <h3>Shopping Cart</h3>
-                <button class="clothbtn">All Clothing</button>
+                <a href="/"><button class="clothbtn">All Clothing</button></a>
             <div className="dropdown">
                 <button class="clothbtn">Sale</button>
                 <div class="dropdown-content">
